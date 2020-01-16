@@ -50,5 +50,7 @@ steps:
     zipAfterPublish: true
 
 - task: PublishBuildArtifacts@1
+  inputs:
+    artifactName: Tailspin.SpaceGame.Web-$(Build.BuildNumber).zip
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
